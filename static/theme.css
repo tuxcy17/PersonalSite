@@ -1,0 +1,38 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.profil-pic {
+    outline: #302E2C dotted medium;
+    padding: 2px;
+}
+
+.h1, h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
