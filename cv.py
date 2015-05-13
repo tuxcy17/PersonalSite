@@ -2,10 +2,10 @@
 #! -*- coding: utf8 -*-
 # Author: Cyril RICHARD
 
+import sqlite3
 from bottle import Bottle, run, view, static_file
-#import sqlite3
+from db.db_tools import *
 
-# app.TEMPLATE_PATH.insert(0,'/home/tuxcy/src/cv/views')
 
 app = Bottle()
 
@@ -15,12 +15,6 @@ app = Bottle()
 def hello():
     context = {'title': "Max est le plus beau"}
     return (context)
-
-# @app.route('/')
-# @view('template.tpl')
-# def hello():
-#     context = {'title': "Max est le plus beau"}
-#     return (context)
 
 @app.route('/static/:path#.+#', name='static')
 def static(path):
