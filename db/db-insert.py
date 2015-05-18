@@ -8,7 +8,7 @@ import sqlite3
 db = sqlite3.connect('cvbase')
 dbc = db.cursor()
 
-data_prog = [
+data_lang = [
     (80, "PYTHON"),
     (50, "C"),
     (40, "SMALLTALK"),
@@ -19,12 +19,39 @@ data_prog = [
     (10, "PERL")
 ]
 
+data_lang = [
+    (80, "PYTHON"),
+    (50, "C"),
+    (40, "SMALLTALK"),
+    (30, "PHP"),
+    (20, "JAVA"),
+    (20, "CSS"),
+    (10, "JS"),
+    (10, "PERL")
+]
+
+
 try: 
     with db:
-        for x in data_prog : 
-            dbc.execute('insert into language (level, proglang) values (?,?)', x)
+        for x in data_lang : 
+            dbc.execute('INSERT INTO language (level, proglang) VALUES (?,?)', x)
 except sqlite3.IntegrityError:
     print 'Issue while inserting data in db.'
+
+try: 
+    with db:
+        for x in data_lang : 
+            dbc.execute('INSERT INTO language (level, proglang) VALUES (?,?)', x)
+except sqlite3.IntegrityError:
+    print 'Issue while inserting data in db.'
+
+try: 
+    with db:
+        for x in data_lang : 
+            dbc.execute('INSERT INTO language (level, proglang) VALUES (?,?)', x)
+except sqlite3.IntegrityError:
+    print 'Issue while inserting data in db.'
+
 
 db.commit()
 dbc.close()

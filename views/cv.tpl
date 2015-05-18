@@ -17,7 +17,6 @@
   </head>
 
   <body role="document">
-
     <!-- navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -46,51 +45,26 @@
       </div>
       <div class="row">
         <div class="col-sm-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Information Générale</h3>
-            </div>
-            <div class="panel-body">
-              <div class="col-sm-6">
-                <div class="media-left">
-                  <a href="#"><img class="media-object profil-pic" src="../static/me.png" alt="a picture of me"></a>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <p>Cyril RICHARD (24 ans)</p>
-                <p>cyril.r.denain59@gmail.com</p>
-                <p>https://github.com/tuxcy17<p>
-                <p>Tél: 06 84 11 20 43</p>
+          <h4>// INFORMATION GENERALE</h4>
+          <div>
+            <div class="col-sm-6">
+              <div class="media-left">
+                <a href="#"><img class="media-object profil-pic" src="../static/me.png" alt="a picture of me"></a>
               </div>
             </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Expérience</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
+            <div class="col-sm-6">
+              <p>Cyril RICHARD (24 ans)</p>
+              <p>cyril.r.denain59@gmail.com</p>
+              <p>https://github.com/tuxcy17<p>
+              <p>Tél: 06 84 11 20 43</p>
             </div>
           </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Projet</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-6 -->
+          <h4>// EXPERIENCE</h4>
+          <h4>// PROJET</h4>
+        </div>
         <div class="col-sm-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Formation</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-6 -->
+          <h4>// FORMATION</h4>
+        </div>
       </div>
 
       <div class="page-header">
@@ -99,46 +73,18 @@
       <div class="row skills">
         <div class="col-sm-8">
           <h4>// LANGUAGE</h4>
+          <% 
+            for x in language:
+              level = x[1] 
+              lang = x[2] 
+          %>
           <div class="progress">
-            <div class="progress-bar progress-bar-info skill-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete</span>
-            PYTHON
+            <div class="progress-bar progress-bar-info skill-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {{level}}%"><span class="sr-only">{{level}}% Complete</span>
+            {{lang}}
             </div>
           </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-info skill-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 50%"><span class="sr-only">50% Complete</span>
-            C
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-info skill-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete</span>
-            SMALLTALK
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-info skill-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 30%"><span class="sr-only">30% Complete</span>
-            PHP
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-info skill-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span>
-            JAVA
-            </div>
-          </div> 
-          <div class="progress">
-            <div class="progress-bar progress-bar-info skill-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span>
-            CSS
-            </div>
-          </div> 
-          <div class="progress">
-            <div class="progress-bar progress-bar-info skill-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 10%"><span class="sr-only">10% Complete</span>
-            JS
-            </div>
-          </div> 
-          <div class="progress">
-            <div class="progress-bar progress-bar-info skill-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 10%"><span class="sr-only">10% Complete</span>
-            PERL
-            </div>
-          </div>                    
+          % end
+
           <div class="skills-legend clearfix">
             <div class="legend-left legend">
                 Beginner
@@ -154,28 +100,30 @@
             </div>
           </div>
         </div>
+
         <div class="col-sm-4">
           <h4>// FRAMEWORK</h4>
-          <h4>
-            <span class="label label-default skills-label">Ubuntu</span>
-            <span class="label label-default skills-label">Raspbian</span>
-            <span class="label label-default skills-label">Git</span>
-            <span class="label label-default skills-label">Postgres SQL</span>
-            <span class="label label-default skills-label">SQL</span>
-            <span class="label label-default skills-label">Sublime Text</span>
-            <span class="label label-default skills-label">Vim</span>
-          </h4>
-          <h6>
-            <span class="label label-default skills-label">Windows</span>
-             <span class="label label-default skills-label">MySQL</span>             
-          </h6>
-          <h8>
-            <span class="label label-default skills-label">Oracle</span>
-            <span class="label label-default skills-label">XML</span>             
-            <span class="label label-default skills-label">Json</span>
-            <span class="label label-default skills-label">NoSQL</span> 
-          </h8>
-          
+          <div>  
+            <h4>
+              <span class="label label-default skills-label">Ubuntu</span>
+              <span class="label label-default skills-label">Raspbian</span>
+              <span class="label label-default skills-label">Git</span>
+              <span class="label label-default skills-label">Postgres SQL</span>
+              <span class="label label-default skills-label">SQL</span>
+              <span class="label label-default skills-label">Sublime Text</span>
+              <span class="label label-default skills-label">Vim</span>
+            </h4>
+            <h6>
+              <span class="label label-default skills-label">Windows</span>
+               <span class="label label-default skills-label">MySQL</span>             
+            </h6>
+            <h8>
+              <span class="label label-default skills-label">Oracle</span>
+              <span class="label label-default skills-label">XML</span>             
+              <span class="label label-default skills-label">Json</span>
+              <span class="label label-default skills-label">NoSQL</span> 
+            </h8>
+          </div>
           <h4>// ENVIRONNEMENT</h4>
           <h4>
             <span class="label label-default skills-label">Ubuntu</span>

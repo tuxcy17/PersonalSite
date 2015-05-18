@@ -6,6 +6,7 @@ import sqlite3
 from bottle import Bottle, run, view, static_file
 from db.db_tools import *
 
+db = './db/cvbase'
 
 app = Bottle()
 
@@ -13,7 +14,8 @@ app = Bottle()
 @app.route('/resume')
 @view('cv.tpl')
 def hello():
-    context = {'title': "Max est le plus beau"}
+    language = getTable(db, 'language')
+    context = {'language': language}
     return (context)
 
 @app.route('/static/:path#.+#', name='static')
