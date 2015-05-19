@@ -1,6 +1,13 @@
 /* Most come from: http://wrapbootstrap.com/preview/WB0265951 */
 
 /*******************************************
+SHORTCUT
+*******************************************/
+.inline-block {
+  display: inline-block;
+}
+
+/*******************************************
 BODY
 *******************************************/
 body {
@@ -73,27 +80,44 @@ CONTACT
 
 .contact-item {
   display: inline-block;
-  font-size: 1.5em;  
+  font-size: 1.8em;  
   padding: 10px;
   border-right: 1px solid #AAA;
   border-bottom: 1px solid #AAA;
-  opacity: 0.2;
+  opacity: 0.6;
+}
+
+.contact-item:hover {
+  color: blue;
 }
 /*******************************************
 EXPERIENCES
 *******************************************/
 .job {
+  margin-bottom: 15px;
+}
 
+.job-function {
+  color: blue;
 }
 
 .where {
-
+  /*font-size: 1.4em;*/
+  font-weight: bold;
+  opacity: 0.8;
 }
 
 .when {
-  
+  font-size: 0.75em;
+  opacity: 0.75;
+  text-align: left;
 }
 
+.description {
+  padding: 10px;
+  border-radius: 10px;
+  background: none repeat scroll 0% 0% #8C4646;
+}
 /*******************************************
 PROJET
 *******************************************/

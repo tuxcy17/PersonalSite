@@ -63,9 +63,19 @@
                   <div class="where">Business Geografic</div>
                   <div class="year">02/2011 - 09/2013</div>
                 </div>
-                <div class="col-sm-8">
-                  <div class="job-function">Analyste-Programmeur</div>
-                  <div class="description">stuff I have done</div>    
+                <div class="col-sm-8 description">
+                  <div class="description-title">Analyste-Programmeur</div>
+                  <div class="description-text">stuff I have done</div>    
+                </div>
+              </div>
+              <div class="job clearfix"> 
+                <div class="col-sm-4">
+                  <div class="where">Conseil Général 22</div>
+                  <div class="year">06/2010 - 07/2010</div>
+                </div>
+                <div class="col-sm-8 description">
+                  <div class="description-title">Technicien SIG</div>
+                  <div class="description-text">relevé GPS</div>    
                 </div>
               </div>
           </div>
@@ -74,69 +84,108 @@
             <h4>// PROJET</h4>
             <div class="job clearfix"> 
               <div class="col-sm-4">
-                <div class="where">Business Geografic</div>
-                <div class="year">02/2011 - 09/2013</div>
+                <div class="where">PersonalSite</div>
+                <div class="year">05/2015 - ...</div>
               </div>
-              <div class="col-sm-8">
-                <div class="job-function">Analyste-Programmeur</div>
-                <div class="description">stuff I have done</div>    
+              <div class="col-sm-8 description">
+                <div class="description-title">https://github.com/tuxcy17/PersonalSite</div>
+                <div class="description-text">Un blog personnel basé sur Bottle (Python) couplé à une base SqlLite.</div>    
+              </div>
+            </div>
+            <div class="job clearfix"> 
+              <div class="col-sm-4">
+                <div class="where">PythonAnalyzer</div>
+                <div class="year">05/2015 - ...</div>
+              </div>
+              <div class="col-sm-8 description">
+                <div class="description-title">https://github.com/tuxcy17/PythonAnalyzer</div>
+                <div class="description-text">
+                  Un projet de plugin SublimeText, clone d'Outline (Eclipse) destiné à l'analyse de code Python.
+                  Basé sur PyQt et Python.</div>    
               </div>
             </div>
           </div>
         </div>
 
         <div class="col-sm-6">
-          <div class="contact">
+          <div class="row contact">
             <h4>// CONTACT</h4>
-            <div class="contact clearfix">
-              <div class="contact-item"><i class="fa fa-fw fa-envelope"></i></div>
-              <address>
-                <strong>Email</strong><br>
-                <a href="mailto:#">tuxcy17@gmail.com</a>
-              </address>
+            <div class="col-sm-6">
+              <div class="contact clearfix">
+                <div class="contact-item"><i class="fa fa-fw fa-envelope"></i></div>
+                <div class='inline-block'>
+                  <strong>Email</strong><br>
+                  <a href="mailto:#">tuxcy17@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact clearfix">
+                <div class="contact-item"><i class="fa fa-fw fa-phone"></i></div>
+                <div class='inline-block'>
+                  <strong>Téléphone</strong><br>
+                  06 84 11 20 43
+                </div>
+              </div>
             </div>
-            <div class="contact clearfix">
-              <div class="contact-item"><i class="fa fa-fw fa-pencil"></i></div>
-              <address>
-                <strong>Mail</strong><br>
-                13 rue Louis Archer<br>
-                St-Genis-Laval, 69230<br>
-              </address>
+            <div class="col-sm-6">
+              <div class="contact clearfix">
+                <div class="contact-item"><i class="fa fa-fw fa-github"></i></div>
+                <div class='inline-block'>
+                  <strong>GitHub</strong><br>
+                  https://github.com/tuxcy17
+                </div>
+              </div>
+              <div class="contact clearfix">
+                <div class="contact-item"><i class="fa fa-fw fa-globe"></i></div>
+                <div class='inline-block'>
+                  <strong>Blog</strong><br>
+                  http://localhost:8080
+                </div>
+              </div>              
             </div>
-            <div class="contact clearfix">
-              <div class="contact-item"><i class="fa fa-fw fa-github"></i></div>
-              <strong>GitHub</strong>>
-              <div class="contact-text">https://github.com/tuxcy17</div>
-            </div>
-            <div class="contact clearfix">
-              <div class="contact-item"><i class="fa fa-fw fa-globe"></i></div>
-              <div class="contact-text">Blog</div>
-              <div class="contact-text">http://localhost:8080</div>
-            </div>              
           </div>
 
           <div class="formation">
             <h4>// FORMATION</h4>
             <div class="job clearfix"> 
               <div class="col-sm-4">
-                <div class="where">Business Geografic</div>
-                <div class="year">02/2011 - 09/2013</div>
+                <div class="where">Université Paris 8</div>
+                <div class="year">2013 - 2015</div>
               </div>
-              <div class="col-sm-8">
-                <div class="job-function">Analyste-Programmeur</div>
-                <div class="description">stuff I have done</div>    
+              <div class="col-sm-8 description">
+                <div class="description-title">Licence Informatique (L2)</div>
+                <div class="description-text">Mention Très Bien (L1)</div>    
               </div>
             </div>
             <div class="job clearfix"> 
               <div class="col-sm-4">
-                <div class="where">Business Geografic</div>
-                <div class="year">02/2011 - 09/2013</div>
+                <div class="where">Université St-Etienne</div>
+                <div class="year">2011/2012</div>
               </div>
-              <div class="col-sm-8">
-                <div class="job-function">Analyste-Programmeur</div>
-                <div class="description">stuff I have done</div>    
+              <div class="col-sm-8 description">
+                <div class="description-title">Master 1 Système d'Information Géographique</div>
+                <div class="description-text">Mention Assez Bien</div>    
               </div>
             </div>
+            <div class="job clearfix"> 
+              <div class="col-sm-4">
+                <div class="where">Université Lyon 3</div>
+                <div class="year">2008 - 2011</div>
+              </div>
+              <div class="col-sm-8 description">
+                <div class="description-title">Licence Géographie</div>
+                <div class="description-text">Mention Assez Bien</div>    
+              </div>
+            </div>
+            <div class="job clearfix"> 
+              <div class="col-sm-4">
+                <div class="where">Lycée René Descartes</div>
+                <div class="year">2007 - 2008</div>
+              </div>
+              <div class="col-sm-8 description">
+                <div class="description-title">Baccalauréat L</div>
+                <div class="description-text">Mention Assez Bien</div>    
+              </div>
+            </div>            
           </div>
         </div>
 
