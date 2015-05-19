@@ -43,15 +43,26 @@ def fillTable(db_name, table, data) :
     db.commit()
     return True
 
-def csv2list(fname) : 
+def getCsvData(txt, data, table) : 
+    if not txt : return data
+    if txt[0] == '' and len(txt) >= 1 :
+        data.update({txt[1]: []}) 
+        return getCsvData(txt[2:], data, txt[1])
+    data[table].append(re.sub(', |, ', ',', txt[0]).split(','))
+    return getCsvData(txt[1:], data, table)
+
+def csv2sqlite(fname, db_name) : 
     f = open(fname, 'r')
-    txt = f.read()
+    txt = f.read().split('\n')
     f.close()
 
     lines = []
+    tables = getCsvData(txt[1:], {txt[0]: []}, txt[0])
+    
+    for table in sorted(tables.keys()) :
+        if fillTable(db_name, table, tables[table]) :
+            print table, 'ok'
 
-    for line in txt.split('\n')
 
-
-
+# csv2sqlite('data.csv', './cvbase')
 #fillTable('./cvbase', 'language', data)
