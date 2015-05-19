@@ -9,29 +9,29 @@ language
 10, PERL
 
 framework
-4, Symfony, https://symfony.com/
-4, Bottle, bottlepy.org/
-4, Kivy, http://kivy.org/
-6, PyQt, http://www.riverbankcomputing.co.uk/software/pyqt/download5
-6, Scapy, www.secdev.org/projects/scapy/
-6, SQLAlchemy, www.sqlalchemy.org/
+2, Symfony, https://symfony.com/
+3, Bottle, bottlepy.org/
+2, Kivy, http://kivy.org/
+2, PyQt, http://www.riverbankcomputing.co.uk/software/pyqt/download5
+1, Scapy, www.secdev.org/projects/scapy/
+1, SQLAlchemy, www.sqlalchemy.org/
 4, Bootstrap, http://getbootstrap.com/
-7, JQuery, https://jquery.com
-7, Meteor, https://www.meteor.com/
-7, NodeJS, https://nodejs.org/
+2, JQuery, https://jquery.com
+1, Meteor, https://www.meteor.com/
+1, NodeJS, https://nodejs.org/
 
 environment
-3, Ubuntu
-4, Raspbian
+4, Ubuntu
+3, Raspbian
 4, Postgres SQL
-4, Vim
-3, SublimeText
-4, Apache
-5, Windows
-5, MySQL
-4, Git
-5, Oracle
-6, JSON
-6, XML
+2, Vim
+4, SublimeText
+2, Apache
+3, Windows
+2, MySQL
+3, Git
+1, Oracle
+1, JSON
+1, XML
 
 

@@ -106,20 +106,20 @@
           <h4>// FRAMEWORK</h4>
           <% 
             for x in framework:
-              level = x[1] 
+              level = 8 + (x[1] * 3) 
               fram = x[2]
               link = x[3] 
           %>
-          <span class="label label-default skills-label">{{fram}}</span>
+          <span class="label label-default skills-label" style="font-size: {{level}}px ">{{fram}}</span>
           % end
 
           <h4>// ENVIRONNEMENT</h4>
           <% 
             for x in environment:
-              level = x[1] 
+              level = 8 + (x[1] * 3) 
               env = x[2]
           %>
-          <span class="label label-default skills-label">{{env}}</span>
+          <span class="label label-default skills-label" style="font-size: {{level}}px">{{env}}</span>
           % end
         </div>
       </div>
