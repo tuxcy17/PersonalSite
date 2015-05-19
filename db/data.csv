@@ -1,19 +1,37 @@
-language1
-80, "PYTHON"
-50, "C"
-40, "SMALLTALK"
-30, "PHP"
-20, "JAVA"
-20, "CSS"
-10, "JS"
-10, "PERL"
+language
+80, PYTHON
+50, C
+40, SMALLTALK
+30, PHP
+20, JAVA
+20, CSS
+10, JS
+10, PERL
 
-language2
-80, "PYTHON"
-50, "C"
-40, "SMALLTALK"
-30, "PHP"
-20, "JAVA"
-20, "CSS"
-10, "JS"
-10, "PERL"
+framework
+4, Symfony, https://symfony.com/
+4, Bottle, bottlepy.org/
+4, Kivy, http://kivy.org/
+6, PyQt, http://www.riverbankcomputing.co.uk/software/pyqt/download5
+6, Scapy, www.secdev.org/projects/scapy/
+6, SQLAlchemy, www.sqlalchemy.org/
+4, Bootstrap, http://getbootstrap.com/
+7, JQuery, https://jquery.com
+7, Meteor, https://www.meteor.com/
+7, NodeJS, https://nodejs.org/
+
+environment
+3, Ubuntu
+4, Raspbian
+4, Postgres SQL
+4, Vim
+3, SublimeText
+4, Apache
+5, Windows
+5, MySQL
+4, Git
+5, Oracle
+6, JSON
+6, XML
+
+

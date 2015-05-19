@@ -15,7 +15,13 @@ app = Bottle()
 @view('cv.tpl')
 def hello():
     language = getTable(db, 'language')
-    context = {'language': language}
+    framework = getTable(db, 'framework')
+    environment = getTable(db, 'environment')
+    context = {
+        'language': language,
+        'framework': framework,
+        'environment': environment
+    }
     return (context)
 
 @app.route('/static/:path#.+#', name='static')

@@ -44,8 +44,8 @@ def fillTable(db_name, table, data) :
     return True
 
 def getCsvData(txt, data, table) : 
-    if not txt : return data
-    if txt[0] == '' and len(txt) >= 1 :
+    if not txt or (txt[0] == '' and txt[1] == '') : return data
+    if txt[0] == '' and txt[1] != '' and len(txt) >= 1 :
         data.update({txt[1]: []}) 
         return getCsvData(txt[2:], data, txt[1])
     data[table].append(re.sub(', |, ', ',', txt[0]).split(','))

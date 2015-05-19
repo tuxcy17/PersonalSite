@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+<!-- Some tricks come from : http://wrapbootstrap.com/preview/WB0265951 ... i'm definitely not yet a front-end dev ! -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Some tricks come from : http://wrapbootstrap.com/preview/WB0265951 ... i'm definitely not yet a front-end dev ! -->
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
@@ -103,47 +104,23 @@
 
         <div class="col-sm-4">
           <h4>// FRAMEWORK</h4>
-          <div>  
-            <h4>
-              <span class="label label-default skills-label">Ubuntu</span>
-              <span class="label label-default skills-label">Raspbian</span>
-              <span class="label label-default skills-label">Git</span>
-              <span class="label label-default skills-label">Postgres SQL</span>
-              <span class="label label-default skills-label">SQL</span>
-              <span class="label label-default skills-label">Sublime Text</span>
-              <span class="label label-default skills-label">Vim</span>
-            </h4>
-            <h6>
-              <span class="label label-default skills-label">Windows</span>
-               <span class="label label-default skills-label">MySQL</span>             
-            </h6>
-            <h8>
-              <span class="label label-default skills-label">Oracle</span>
-              <span class="label label-default skills-label">XML</span>             
-              <span class="label label-default skills-label">Json</span>
-              <span class="label label-default skills-label">NoSQL</span> 
-            </h8>
-          </div>
+          <% 
+            for x in framework:
+              level = x[1] 
+              fram = x[2]
+              link = x[3] 
+          %>
+          <span class="label label-default skills-label">{{fram}}</span>
+          % end
+
           <h4>// ENVIRONNEMENT</h4>
-          <h4>
-            <span class="label label-default skills-label">Ubuntu</span>
-            <span class="label label-default skills-label">Raspbian</span>
-            <span class="label label-default skills-label">Git</span>
-            <span class="label label-default skills-label">Postgres SQL</span>
-            <span class="label label-default skills-label">SQL</span>
-            <span class="label label-default skills-label">Sublime Text</span>
-            <span class="label label-default skills-label">Vim</span>
-          </h4>
-          <h6>
-            <span class="label label-default skills-label">Windows</span>
-            <span class="label label-default skills-label">MySQL</span>             
-          </h6>
-          <h8>
-            <span class="label label-default skills-label">Oracle</span>
-            <span class="label label-default skills-label">XML</span>             
-            <span class="label label-default skills-label">Json</span>
-            <span class="label label-default skills-label">NoSQL</span> 
-          </h8>
+          <% 
+            for x in environment:
+              level = x[1] 
+              env = x[2]
+          %>
+          <span class="label label-default skills-label">{{env}}</span>
+          % end
         </div>
       </div>
 

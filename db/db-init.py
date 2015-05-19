@@ -1,17 +1,39 @@
 #! /usr/bin/env python
 #! -*- coding: utf8 -*-
 # Author: Cyril RICHARD
+# Source: http://stackoverflow.com/questions/2380553/sqlite-run-multi-line-sql-script-from-file
 
-#extract from Linux Mag !
+import db_tools
 import sqlite3
+import os
 
-db = sqlite3.connect('cvbase') #connection / opening database 
-dbc = db.cursor() #cursor / ability to execute SQL
+dbname = './cvbase'
+sql_file = './struct.sql'
+data_file = './data.csv'
 
-dbc.execute('''CREATE TABLE language (id integer primary key, level integer, proglang text)''') # sql execution
-dbc.execute('''CREATE TABLE framework (id integer primary key, level integer, framew text)''') # sql execution
-dbc.execute('''CREATE TABLE environment (id integer primary key, level integer, env text)''') # sql execution
+query = open(sql_file, 'r').read()
 
+# Test if query is valid
+if sqlite3.complete_statement(query) : 
+    # Delete the old db
+    if os.path.isfile(dbname): os.remove(dbname)
 
-db.commit() # modification's commit
-dbc.close() # closing cursor
+    # Instantiate db 
+    db = sqlite3.connect(dbname)
+    dbc = db.cursor()
+
+    # Execute script 
+    try:
+        with db:
+            dbc.executescript(query)
+    except Exception as e:
+        print dbname + ': ' + str(e)
+        dbc.close()
+        raise
+
+    db.commit() #commit !
+
+    db_tools.csv2sqlite(data_file, dbname)
+
+else : 
+    exit('invalid query in file: ' + sql_file)
