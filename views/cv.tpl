@@ -13,6 +13,8 @@
     <title>Hello !</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Custom styles -->
     <link href="../static/theme.css" rel="stylesheet">
   </head>
@@ -32,7 +34,7 @@
         </div> -->
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#aboutme">ABOUT ME</a></li>
+            <li><a href="#aboutme">HOME</a></li>
             <li class="active"><a href="#resume">RESUME</a></li>
             <li><a href="#contact">CONTACT</a></li>
           </ul>
@@ -46,26 +48,98 @@
       </div>
       <div class="row">
         <div class="col-sm-6">
-          <h4>// INFORMATION GENERALE</h4>
-          <div>
-            <div class="col-sm-6">
-              <div class="media-left">
-                <a href="#"><img class="media-object profil-pic" src="../static/me.png" alt="a picture of me"></a>
+
+          <div class="a-propros">
+            <h4>// A PROPOS</h4>
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            </blockquote>
+          </div>
+
+          <div class="experience">
+              <h4>// EXPERIENCE</h4>
+              <div class="job clearfix"> 
+                <div class="col-sm-4">
+                  <div class="where">Business Geografic</div>
+                  <div class="year">02/2011 - 09/2013</div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="job-function">Analyste-Programmeur</div>
+                  <div class="description">stuff I have done</div>    
+                </div>
+              </div>
+          </div>
+
+          <div class="projet">
+            <h4>// PROJET</h4>
+            <div class="job clearfix"> 
+              <div class="col-sm-4">
+                <div class="where">Business Geografic</div>
+                <div class="year">02/2011 - 09/2013</div>
+              </div>
+              <div class="col-sm-8">
+                <div class="job-function">Analyste-Programmeur</div>
+                <div class="description">stuff I have done</div>    
               </div>
             </div>
-            <div class="col-sm-6">
-              <p>Cyril RICHARD (24 ans)</p>
-              <p>cyril.r.denain59@gmail.com</p>
-              <p>https://github.com/tuxcy17<p>
-              <p>Tél: 06 84 11 20 43</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="contact">
+            <h4>// CONTACT</h4>
+            <div class="contact clearfix">
+              <div class="contact-item"><i class="fa fa-fw fa-envelope"></i></div>
+              <address>
+                <strong>Email</strong><br>
+                <a href="mailto:#">tuxcy17@gmail.com</a>
+              </address>
+            </div>
+            <div class="contact clearfix">
+              <div class="contact-item"><i class="fa fa-fw fa-pencil"></i></div>
+              <address>
+                <strong>Mail</strong><br>
+                13 rue Louis Archer<br>
+                St-Genis-Laval, 69230<br>
+              </address>
+            </div>
+            <div class="contact clearfix">
+              <div class="contact-item"><i class="fa fa-fw fa-github"></i></div>
+              <strong>GitHub</strong>>
+              <div class="contact-text">https://github.com/tuxcy17</div>
+            </div>
+            <div class="contact clearfix">
+              <div class="contact-item"><i class="fa fa-fw fa-globe"></i></div>
+              <div class="contact-text">Blog</div>
+              <div class="contact-text">http://localhost:8080</div>
+            </div>              
+          </div>
+
+          <div class="formation">
+            <h4>// FORMATION</h4>
+            <div class="job clearfix"> 
+              <div class="col-sm-4">
+                <div class="where">Business Geografic</div>
+                <div class="year">02/2011 - 09/2013</div>
+              </div>
+              <div class="col-sm-8">
+                <div class="job-function">Analyste-Programmeur</div>
+                <div class="description">stuff I have done</div>    
+              </div>
+            </div>
+            <div class="job clearfix"> 
+              <div class="col-sm-4">
+                <div class="where">Business Geografic</div>
+                <div class="year">02/2011 - 09/2013</div>
+              </div>
+              <div class="col-sm-8">
+                <div class="job-function">Analyste-Programmeur</div>
+                <div class="description">stuff I have done</div>    
+              </div>
             </div>
           </div>
-          <h4>// EXPERIENCE</h4>
-          <h4>// PROJET</h4>
         </div>
-        <div class="col-sm-6">
-          <h4>// FORMATION</h4>
-        </div>
+
       </div>
 
       <div class="page-header">
@@ -88,13 +162,13 @@
 
           <div class="skills-legend clearfix">
             <div class="legend-left legend">
-                Beginner
+                Débutant
             </div>
             <div class="legend-left legend">
-                <span>Medium</span>
+                <span>Intermédiaire</span>
             </div>
             <div class="legend-right legend">
-                <span>Proficient</span>
+                <span>Avancé</span>
             </div>
             <div class="legend-right legend">
                 Expert
@@ -110,8 +184,29 @@
               fram = x[2]
               link = x[3] 
           %>
-          <span class="label label-default skills-label" style="font-size: {{level}}px ">{{fram}}</span>
+          <span class="label skills-label" style="font-size: {{level}}px ">{{fram}}</span>
           % end
+
+          <h4>// LANGUES</h4>
+            <div class="skill">Français
+              <div class="pull-right" style="color: #ED8351;">
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">Anglais
+              <div class="icons pull-right" style="color: #ED8351;">
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star"></i>
+                <i class="fa fa-fw fa-star-half-empty"></i>
+                <i class="fa fa-fw fa-star-o"></i>
+              </div>
+
+            </div>
 
           <h4>// ENVIRONNEMENT</h4>
           <% 
@@ -119,7 +214,7 @@
               level = 8 + (x[1] * 3) 
               env = x[2]
           %>
-          <span class="label label-default skills-label" style="font-size: {{level}}px">{{env}}</span>
+          <span class="label skills-label" style="font-size: {{level}}px">{{env}}</span>
           % end
         </div>
       </div>
