@@ -52,59 +52,62 @@
           <div class="a-propros">
             <h4>// A PROPOS</h4>
             <blockquote>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p>Jeune développeur (encore étudiant !) passioné et curieux, je cherche avant tout des expériences enrichissantes me permettant de progresser et de m'améliorer. Je suis donc à l'écoute de toute proposition !</p>
             </blockquote>
           </div>
 
           <div class="experience">
-              <h4>// EXPERIENCE</h4>
-              <div class="job clearfix"> 
-                <div class="col-sm-4">
-                  <div class="where">Business Geografic</div>
-                  <div class="year">02/2011 - 09/2013</div>
-                </div>
-                <div class="col-sm-8 description">
-                  <div class="description-title">Analyste-Programmeur</div>
-                  <div class="description-text">stuff I have done</div>    
-                </div>
-              </div>
-              <div class="job clearfix"> 
-                <div class="col-sm-4">
-                  <div class="where">Conseil Général 22</div>
-                  <div class="year">06/2010 - 07/2010</div>
-                </div>
-                <div class="col-sm-8 description">
-                  <div class="description-title">Technicien SIG</div>
-                  <div class="description-text">relevé GPS</div>    
-                </div>
-              </div>
-          </div>
-
-          <div class="projet">
-            <h4>// PROJET</h4>
+            <h4>// EXPERIENCE</h4>
             <div class="job clearfix"> 
-              <div class="col-sm-4">
-                <div class="where">PersonalSite</div>
-                <div class="year">05/2015 - ...</div>
+              <div class="col-sm-4 header-list">
+                <div class="where">Business Geografic</div>
+                <div class="year">02/2011 - 09/2013</div>
               </div>
               <div class="col-sm-8 description">
-                <div class="description-title">https://github.com/tuxcy17/PersonalSite</div>
-                <div class="description-text">Un blog personnel basé sur Bottle (Python) couplé à une base SqlLite.</div>    
+                <div class="description-title">Analyste-Programmeur</div>
+                <div class="description-text">stuff I have done</div>    
               </div>
             </div>
             <div class="job clearfix"> 
-              <div class="col-sm-4">
-                <div class="where">PythonAnalyzer</div>
+              <div class="col-sm-4 header-list">
+                <div class="where">Conseil Général 22</div>
+                <div class="year">06/2010 - 07/2010</div>
+              </div>
+              <div class="col-sm-8 description">
+                <div class="description-title">Technicien SIG</div>
+                <div class="description-text">relevé GPS</div>    
+              </div>
+            </div>
+          </div>
+          
+          <div class="projet">
+            <h4>// PROJET</h4>
+            <div class="job clearfix"> 
+              <div class="col-sm-4 header-list">
+                <div class="where">
+                  <a target="_blank" href="https://github.com/tuxcy17/PersonalSite">PersonalSite</a>
+                </div>
                 <div class="year">05/2015 - ...</div>
               </div>
               <div class="col-sm-8 description">
-                <div class="description-title">https://github.com/tuxcy17/PythonAnalyzer</div>
+                <!-- <div class="description-title"></div> -->
+                <div class="description-text">Un blog personnel basé sur Bottle (Python) et Bootstrap couplé à une base SqlLite.</div>    
+              </div>
+            </div>
+            <div class="job clearfix"> 
+              <div class="col-sm-4 header-list">
+                <div class="where">
+                  <a target="_blank" href="https://github.com/tuxcy17/PythonAnalyzer">PythonAnalyzer</a>
+                </div>
+                <div class="year">05/2015 - ...</div>
+              </div>
+              <div class="col-sm-8 description">
                 <div class="description-text">
                   Un projet de plugin SublimeText, clone d'Outline (Eclipse) destiné à l'analyse de code Python.
                   Basé sur PyQt et Python.</div>    
               </div>
             </div>
-          </div>
+          </div>    
         </div>
 
         <div class="col-sm-6">
@@ -131,14 +134,14 @@
                 <div class="contact-item"><i class="fa fa-fw fa-github"></i></div>
                 <div class='inline-block'>
                   <strong>GitHub</strong><br>
-                  https://github.com/tuxcy17
+                    <a target="_blank" href="https://github.com/tuxcy17">https://github.com/tuxcy17</a>
                 </div>
               </div>
               <div class="contact clearfix">
                 <div class="contact-item"><i class="fa fa-fw fa-globe"></i></div>
                 <div class='inline-block'>
                   <strong>Blog</strong><br>
-                  http://localhost:8080
+                    <a target="_blank" href="http://localhost:8080">http://localhost:8080</a>
                 </div>
               </div>              
             </div>
@@ -147,9 +150,9 @@
           <div class="formation">
             <h4>// FORMATION</h4>
             <div class="job clearfix"> 
-              <div class="col-sm-4">
+              <div class="col-sm-4 header-list">
                 <div class="where">Université Paris 8</div>
-                <div class="year">2013 - 2015</div>
+                <div class="year">2013 - ...</div>
               </div>
               <div class="col-sm-8 description">
                 <div class="description-title">Licence Informatique (L2)</div>
@@ -157,7 +160,7 @@
               </div>
             </div>
             <div class="job clearfix"> 
-              <div class="col-sm-4">
+              <div class="col-sm-4 header-list">
                 <div class="where">Université St-Etienne</div>
                 <div class="year">2011/2012</div>
               </div>
@@ -167,7 +170,7 @@
               </div>
             </div>
             <div class="job clearfix"> 
-              <div class="col-sm-4">
+              <div class="col-sm-4 header-list">
                 <div class="where">Université Lyon 3</div>
                 <div class="year">2008 - 2011</div>
               </div>
@@ -177,7 +180,7 @@
               </div>
             </div>
             <div class="job clearfix"> 
-              <div class="col-sm-4">
+              <div class="col-sm-4 header-list">
                 <div class="where">Lycée René Descartes</div>
                 <div class="year">2007 - 2008</div>
               </div>
@@ -186,9 +189,8 @@
                 <div class="description-text">Mention Assez Bien</div>    
               </div>
             </div>            
-          </div>
+          </div>      
         </div>
-
       </div>
 
       <div class="page-header">
