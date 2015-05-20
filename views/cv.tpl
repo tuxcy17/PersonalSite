@@ -38,8 +38,18 @@
       <div class="page-header">
         <h2>Et à part ça ?</h2>
       </div>
-    </div>
-
+      <div class="row">
+        <div class="col-sm-4">
+          % include('hobbie.tpl')
+        </div>
+        <div class="col-sm-4">
+          % include('voyage.tpl')
+        </div>
+        <div class="col-sm-4">
+          % include('thank.tpl')
+        </div>
+      </div>
+    </div>          
     % include('foot-script.tpl')
   </body>
 </html>

@@ -13,35 +13,27 @@ app = Bottle()
 @app.route('/')
 @app.route('/home')
 @view('home.tpl')
-def hello():
-    language = getTable(db, 'language')
-    framework = getTable(db, 'framework')
-    environment = getTable(db, 'environment')
-    context = {
-        'language': language,
-        'framework': framework,
-        'environment': environment
-    }
+def home():
+    context = {'page': 'home'}
     return (context)
 
 @app.route('/articles')
 @view('articles.tpl')
-def hello():
-    language = getTable(db, 'language')
-    framework = getTable(db, 'framework')
-    environment = getTable(db, 'environment')
-    context = {
-        'language': language,
-        'framework': framework,
-        'environment': environment
-    }
+def articles():
+    context = {'page': 'articles', 'article': getTable(db, 'article'), 'page_index': 0}
     return (context)
+
+# @app.route('/articles')
+# @view('articles.tpl')
+# def articles():
+#     context = {'page': 'articles', 'article': getTable(db, 'article'), 'page_index': 0}
+#     return (context)
 
 
 @app.route('/resume')
 @view('cv.tpl')
-def hello():
-    context = {}
+def resume():
+    context = {'page': 'resume'}
     tables = [
         'language', 'framework', 'environment',
         'contact', 'experience', 'formation', 'projet'

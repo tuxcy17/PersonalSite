@@ -12,10 +12,16 @@
         </div> -->
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#aboutme">HOME</a></li>
-            <li><a href="#aboutme">ARTICLES</a></li>
-            <li class="active"><a href="#resume">RESUME</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <%
+            for x in ['Home', 'Articles', 'Resume']  : 
+              comp = x.lower()    
+            %>
+            % if comp == page :
+              <li class="active"><a href="/{{comp}}"><strong>{{x}}</strong></a></li>
+            % else :
+              <li><a href="/{{comp}}">{{x}}</a></li>
+            % end
+            % end
           </ul>
         </div>
       </div>

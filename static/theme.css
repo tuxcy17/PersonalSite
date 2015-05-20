@@ -6,7 +6,6 @@ SHORTCUT
 .inline-block {
   display: inline-block;
 }
-
 /*******************************************
 BODY
 *******************************************/
@@ -14,7 +13,6 @@ body {
   padding-top: 70px;
   padding-bottom: 30px;
 }
-
 /*******************************************
 NAVBAR
 *******************************************/
@@ -40,6 +38,17 @@ NAVBAR
 
 .navbar .navbar-collapse {
   text-align: center;
+}
+/*******************************************
+ARTICLE
+*******************************************/
+.article-paginer {
+  display: block;
+  text-align: center;
+}
+
+.article-vertical {
+  padding-top: 5%;
 }
 /*******************************************
 PIC

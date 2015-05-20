@@ -50,3 +50,17 @@ CREATE TABLE contact (
     link text, 
     texte text
 );
+
+CREATE TABLE article (
+    id integer primary key,
+    date_ date, 
+    title text,
+    article text
+);
+
+CREATE TRIGGER article_date_trigger AFTER INSERT ON article
+BEGIN
+    UPDATE article SET date_ = date()
+    WHERE id = NEW.id;
+END;
+
