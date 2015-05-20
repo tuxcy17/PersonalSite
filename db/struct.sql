@@ -47,5 +47,6 @@ CREATE TABLE contact (
     id integer primary key,
     type text, 
     icon text,
-    texte text  
+    link text, 
+    texte text
 );
