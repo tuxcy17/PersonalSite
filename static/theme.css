@@ -6,6 +6,10 @@ SHORTCUT
 .inline-block {
   display: inline-block;
 }
+
+.head-title , .head-title > a {
+  color: #6F6F6F;
+}
 /*******************************************
 BODY
 *******************************************/
@@ -16,17 +20,13 @@ body {
 /*******************************************
 NAVBAR
 *******************************************/
-.theme-dropdown .dropdown-menu {
+.dropdown-menu {
   position: static;
   display: block;
   margin-bottom: 20px;
 }
 
-.theme-showcase > p > .btn {
-  margin: 5px 0;
-}
-
-.theme-showcase .navbar .container {
+.navbar .container {
   width: auto;
 }
 
@@ -63,6 +63,10 @@ H(x)
 .h2, h2 {
     font-size: 36px;
     text-align: center;
+}
+
+.resume > :checked :active {
+
 }
 
 h4 {

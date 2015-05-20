@@ -7,7 +7,7 @@
       <nav class="article-paginer">
         <ul class="pagination">
           <li>
-            <a href="#" aria-label="Previous">
+            <a href="/articles/{{prev_}}" aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
@@ -17,7 +17,7 @@
           <li><a href="#">4</a></li>
           <li><a href="#">{{length}}</a></li>
           <li>
-            <a href="#" aria-label="Next">
+            <a href="/articles/{{next_}}" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
             </a>
           </li>

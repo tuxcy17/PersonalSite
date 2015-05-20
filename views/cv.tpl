@@ -4,10 +4,8 @@
 
   <body role="document">
     % include('navbar.tpl')
-    <div class="container theme-showcase" role="main">
-      <div class="page-header">
-        <h2>Synoptique</h2>
-      </div>
+    <div class="container resume" role="main" data-collapse>
+      <h2 class="page-header open head-title">Synoptique</h2>
       <div class="row">
         <div class="col-sm-6">
           % include('a-propos.tpl')
@@ -20,9 +18,7 @@
         </div>
       </div>
 
-      <div class="page-header">
-        <h2>Compétences</h2>
-      </div>
+      <h2 class="page-header head-title">Compétences</h2>
       <div class="row skills">
         <div class="col-sm-8">
           % include('language.tpl')
@@ -35,9 +31,7 @@
         </div>
       </div>
 
-      <div class="page-header">
-        <h2>Et à part ça ?</h2>
-      </div>
+      <h2 class="page-header head-title">Et à part ça ?</h2>
       <div class="row">
         <div class="col-sm-4">
           % include('hobbie.tpl')

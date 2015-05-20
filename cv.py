@@ -10,17 +10,19 @@ db = './db/cvbase'
 
 app = Bottle()
 
-@app.route('/articles/:page_index')
-@view('articles.tpl')
-def articles(page_index):
-    context = {'page': 'articles', 'article': getTable(db, 'article'), 'page_index': int(page_index)}
-    return (context)
+
 
 @app.route('/')
 @app.route('/home')
 @view('home.tpl')
 def home():
     context = {'page': 'home'}
+    return (context)
+
+@app.route('/articles/:page_index')
+@view('articles.tpl')
+def articles(page_index):
+    context = {'page': 'articles', 'article': getTable(db, 'article'), 'page_index': int(page_index)}
     return (context)
 
 @app.route('/articles')
