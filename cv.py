@@ -11,8 +11,8 @@ db = './db/cvbase'
 app = Bottle()
 
 @app.route('/')
-@app.route('/resume')
-@view('cv.tpl')
+@app.route('/home')
+@view('home.tpl')
 def hello():
     language = getTable(db, 'language')
     framework = getTable(db, 'framework')
@@ -22,6 +22,34 @@ def hello():
         'framework': framework,
         'environment': environment
     }
+    return (context)
+
+@app.route('/articles')
+@view('articles.tpl')
+def hello():
+    language = getTable(db, 'language')
+    framework = getTable(db, 'framework')
+    environment = getTable(db, 'environment')
+    context = {
+        'language': language,
+        'framework': framework,
+        'environment': environment
+    }
+    return (context)
+
+
+@app.route('/resume')
+@view('cv.tpl')
+def hello():
+    context = {}
+    tables = [
+        'language', 'framework', 'environment',
+        'contact', 'experience', 'formation', 'projet'
+    ]
+
+    for t in tables : 
+        context.update({t: getTable(db, t)})
+
     return (context)
 
 @app.route('/static/:path#.+#', name='static')

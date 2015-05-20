@@ -1,46 +1,9 @@
 <!DOCTYPE html>
 <!-- Some tricks come from : http://wrapbootstrap.com/preview/WB0265951 ... i'm definitely not yet a front-end dev ! -->
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <title>Hello !</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Custom styles -->
-    <link href="../static/theme.css" rel="stylesheet">
-  </head>
+  % include('header.tpl')
 
   <body role="document">
-    <!-- navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-<!--         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Bootstrap theme</a>
-        </div> -->
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#aboutme">HOME</a></li>
-            <li class="active"><a href="#resume">RESUME</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav><!-- navbar -->
+    % include('navbar.tpl')
 
     <div class="container theme-showcase" role="main">
       <div class="page-header">
@@ -48,66 +11,9 @@
       </div>
       <div class="row">
         <div class="col-sm-6">
-
-          <div class="a-propros">
-            <h4>// A PROPOS</h4>
-            <blockquote>
-              <p>Jeune développeur (encore étudiant !) passioné et curieux, je cherche avant tout des expériences enrichissantes me permettant de progresser et de m'améliorer. Je suis donc à l'écoute de toute proposition !</p>
-            </blockquote>
-          </div>
-
-          <div class="experience">
-            <h4>// EXPERIENCE</h4>
-            <div class="job clearfix"> 
-              <div class="col-sm-4 header-list">
-                <div class="where">Business Geografic</div>
-                <div class="year">02/2011 - 09/2013</div>
-              </div>
-              <div class="col-sm-8 description">
-                <div class="description-title">Analyste-Programmeur</div>
-                <div class="description-text">stuff I have done</div>    
-              </div>
-            </div>
-            <div class="job clearfix"> 
-              <div class="col-sm-4 header-list">
-                <div class="where">Conseil Général 22</div>
-                <div class="year">06/2010 - 07/2010</div>
-              </div>
-              <div class="col-sm-8 description">
-                <div class="description-title">Technicien SIG</div>
-                <div class="description-text">relevé GPS</div>    
-              </div>
-            </div>
-          </div>
-          
-          <div class="projet">
-            <h4>// PROJET</h4>
-            <div class="job clearfix"> 
-              <div class="col-sm-4 header-list">
-                <div class="where">
-                  <a target="_blank" href="https://github.com/tuxcy17/PersonalSite">PersonalSite</a>
-                </div>
-                <div class="year">05/2015 - ...</div>
-              </div>
-              <div class="col-sm-8 description">
-                <!-- <div class="description-title"></div> -->
-                <div class="description-text">Un blog personnel basé sur Bottle (Python) et Bootstrap couplé à une base SqlLite.</div>    
-              </div>
-            </div>
-            <div class="job clearfix"> 
-              <div class="col-sm-4 header-list">
-                <div class="where">
-                  <a target="_blank" href="https://github.com/tuxcy17/PythonAnalyzer">PythonAnalyzer</a>
-                </div>
-                <div class="year">05/2015 - ...</div>
-              </div>
-              <div class="col-sm-8 description">
-                <div class="description-text">
-                  Un projet de plugin SublimeText, clone d'Outline (Eclipse) destiné à l'analyse de code Python.
-                  Basé sur PyQt et Python.</div>    
-              </div>
-            </div>
-          </div>    
+          % include('a-propos.tpl')
+          % include('experience.tpl')
+          % include('projet.tpl')
         </div>
 
         <div class="col-sm-6">
@@ -198,75 +104,13 @@
       </div>
       <div class="row skills">
         <div class="col-sm-8">
-          <h4>// LANGUAGE</h4>
-          <% 
-            for x in language:
-              level = x[1] 
-              lang = x[2] 
-          %>
-          <div class="progress">
-            <div class="progress-bar progress-bar-info skill-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {{level}}%"><span class="sr-only">{{level}}% Complete</span>
-            {{lang}}
-            </div>
-          </div>
-          % end
-
-          <div class="skills-legend clearfix">
-            <div class="legend-left legend">
-                Débutant
-            </div>
-            <div class="legend-left legend">
-                <span>Intermédiaire</span>
-            </div>
-            <div class="legend-right legend">
-                <span>Avancé</span>
-            </div>
-            <div class="legend-right legend">
-                Expert
-            </div>
-          </div>
+          % include('language.tpl')
+          % include('legend.tpl')
         </div>
-
         <div class="col-sm-4">
-          <h4>// FRAMEWORK</h4>
-          <% 
-            for x in framework:
-              level = 8 + (x[1] * 3) 
-              fram = x[2]
-              link = x[3] 
-          %>
-          <span class="label skills-label" style="font-size: {{level}}px ">{{fram}}</span>
-          % end
-
-          <h4>// LANGUES</h4>
-            <div class="skill">Français
-              <div class="pull-right" style="color: #ED8351;">
-                <i class="fa fa-fw fa-star"></i>
-                <i class="fa fa-fw fa-star"></i>
-                <i class="fa fa-fw fa-star"></i>
-                <i class="fa fa-fw fa-star"></i>
-                <i class="fa fa-fw fa-star"></i>
-              </div>
-            </div>
-            <div class="skill">Anglais
-              <div class="icons pull-right" style="color: #ED8351;">
-                <i class="fa fa-fw fa-star"></i>
-                <i class="fa fa-fw fa-star"></i>
-                <i class="fa fa-fw fa-star"></i>
-                <i class="fa fa-fw fa-star-half-empty"></i>
-                <i class="fa fa-fw fa-star-o"></i>
-              </div>
-
-            </div>
-
-          <h4>// ENVIRONNEMENT</h4>
-          <% 
-            for x in environment:
-              level = 8 + (x[1] * 3) 
-              env = x[2]
-          %>
-          <span class="label skills-label" style="font-size: {{level}}px">{{env}}</span>
-          % end
+          % include('framework.tpl')
+          % include('langues.tpl')
+          % include('environment.tpl')
         </div>
       </div>
 

@@ -53,7 +53,7 @@ def getCsvData(txt, data, table) :
 
 def csv2sqlite(fname, db_name) : 
     f = open(fname, 'r')
-    txt = f.read().split('\n')
+    txt = f.read().decode('utf8').split('\n')
     f.close()
 
     lines = []
