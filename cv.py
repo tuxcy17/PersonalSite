@@ -29,7 +29,7 @@ def articles(page_index):
 @app.route('/articles/')
 @view('articles.tpl')
 def articles():
-    context = {'page': 'articles', 'article': getTable(db, 'article'), 'page_index': 0}
+    context = {'page': 'articles', 'article': getTable(db, 'article'), 'page_index': 1}
     return (context)
 
 @app.route('/resume')

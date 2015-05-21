@@ -22,7 +22,7 @@
                     % elif link == 'link' :
                     <a target="_blank" href="{{text}}"><small>{{text}}</small></a>
                     % else : 
-                    {{text}}
+                    <small>{{text}}</small>
                     % end
                   </div>
                 </div>

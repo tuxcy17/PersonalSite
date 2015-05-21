@@ -1,7 +1,7 @@
       <div class="row">
         <div class="article-vertical">
           <%
-            sindex = page_index * 3
+            sindex = page_index * 3 - 3
             eindex = (sindex + 3 if sindex + 3 < len(article) else len(article)) 
             for a in article[sindex:eindex] :
               id = a[0]
